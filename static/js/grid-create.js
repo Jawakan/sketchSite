@@ -10,7 +10,8 @@ function createGrid() {
 	while (j < gridPixels) {
 	    let rItem = document.createElement("div");
 		rItem.setAttribute('class', 'grid-item');
-		rItem.addEventListener('mouseenter', updateBG)
+		rItem.addEventListener('mouseenter', updateBG);
+		rItem.addEventListener('touchmove', updateBG);
 		rRow.appendChild(rItem);
 		j++;
 	};
