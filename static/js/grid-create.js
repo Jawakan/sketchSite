@@ -40,8 +40,6 @@ function changeGridPixels() {
 	let newGridParam = parseInt(userWant);
 	if (newGridParam >= 16 && newGridParam <= 100) {
 		gridPixels = newGridParam;
-		//let gDelete = document.getElementById('mainContain');
-	//	gDelete.remove();
 		createLinesForGrid();
 	} else {
 		alert("Invalid input");
@@ -53,19 +51,19 @@ welcome.innerText = "Web Sketch";
 document.body.appendChild(welcome);
 let rContainer = '';
 
-let gridPixels = 100
-createLinesForGrid();
+const buttonsArea = document.createElement("div");
+buttonsArea.setAttribute('id', 'userButtons')
+document.body.appendChild(buttonsArea);
 
-
-//let divReset = document.querySelectorAll("div");
 const resetButton = document.createElement("button");
 resetButton.textContent = "reset";
-welcome.appendChild(resetButton);
+buttonsArea.appendChild(resetButton);
 resetButton.addEventListener('click', createLinesForGrid);
 
 const resizeButton = document.createElement("button");
 resizeButton.textContent = "Resize Pixels";
-welcome.appendChild(resizeButton);
+buttonsArea.appendChild(resizeButton);
 resizeButton.addEventListener('click', changeGridPixels);
 
-	
+let gridPixels = 100
+createLinesForGrid();

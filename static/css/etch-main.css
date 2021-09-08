@@ -5,8 +5,8 @@
 	top: 20px;
 	flex-direction: column;
     align-items: normal;
-	height: 825px;
-	width: 825px;
+	height: 815px;
+	width: 815px;
 }
 
 .grid-row {
@@ -27,12 +27,16 @@ h1 {
 	font-family: monospace;
 	text-align: center;
 	margin: auto;
-	padding: 20px;
+	padding: 10px;
 	font-size: 32px;
 }
 button {
 	margin: 10px;
-	transform: scale(1.2);
-	position: relative;
-	right: 400px;
+	transform: scale(1.1);
+}
+
+#userButtons {
+    margin: auto;
+    display: flex;
+    justify-content: center;
 }
