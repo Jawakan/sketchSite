@@ -17,11 +17,11 @@
 	
 .grid-item {
 	display: flex;
-	background: white;
+	background: #EEE;
 	flex: auto;
 }
 body {
-	background: #EEEFEE;
+	background-image: radial-gradient(#ABC, #CBA);
 }
 h1 {
 	font-family: monospace;
