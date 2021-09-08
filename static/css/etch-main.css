@@ -5,8 +5,10 @@
 	top: 20px;
 	flex-direction: column;
     align-items: normal;
-	height: 815px;
-	width: 815px;
+	height: 615px;
+	width: 615px;
+	border: groove 4px black;
+
 }
 
 .grid-row {
@@ -22,17 +24,22 @@
 }
 body {
 	background-image: radial-gradient(#ABC, #CBA);
+	animation-name: loading;
+	animation-duration: 0.2s;
+	animation-timing-function: ease-out;
 }
 h1 {
 	font-family: monospace;
 	text-align: center;
 	margin: auto;
 	padding: 10px;
-	font-size: 32px;
+	font-size: 42px;
 }
 button {
-	margin: 10px;
-	transform: scale(1.25);
+	margin: 15px 30px 15px 30px;
+	transform: scale(1.5);
+	background-image: linear-gradient(#678, #765);
+	border: solid 1px #222;
 }
 
 #userButtons {
@@ -47,4 +54,12 @@ button {
     right: 2px;
     font-family: monospace;
     font-size: 18px;
+}
+
+@keyframes loading {
+    0% {background-image: radial-gradient(#456, #654);}
+    25% {background-image: radial-gradient(#567, #765);}
+    50% {background-image: radial-gradient(#678, #876);}
+    75% {background-image: radial-gradient(#89A, #A98);}
+    100% {background-image: radial-gradient(#ABC, #CBA);}
 }

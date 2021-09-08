@@ -37,9 +37,9 @@ function createLinesForGrid() {
 
 function changeGridPixels() {
 	console.log("Valid");
-	let userWant = prompt("Enter desired pixels in grid (16 to 100)", 64);
+	let userWant = prompt("Enter desired pixels in grid (16 to 64)", 44);
 	let newGridParam = parseInt(userWant);
-	if (newGridParam >= 16 && newGridParam <= 100) {
+	if (newGridParam >= 16 && newGridParam <= 64) {
 		gridPixels = newGridParam;
 		createLinesForGrid();
 	} else {
