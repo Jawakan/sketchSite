@@ -62,7 +62,7 @@ buttonsArea.appendChild(resetButton);
 resetButton.addEventListener('click', createLinesForGrid);
 
 const resizeButton = document.createElement("button");
-resizeButton.textContent = "Resize Pixels";
+resizeButton.textContent = "resize pixels";
 buttonsArea.appendChild(resizeButton);
 resizeButton.addEventListener('click', changeGridPixels);
 
@@ -71,6 +71,7 @@ createLinesForGrid();
 
 const gHubLink = document.createElement("a");
 gHubLink.textContent = "View source on GitHub";
+gHubLink.title = "Open project page on GitHub";
 gHubLink.setAttribute('href', 'https://github.com/Jawakan/sketchSite');
 gHubLink.setAttribute('id', 'mySource')
 document.body.appendChild(gHubLink);

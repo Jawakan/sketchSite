@@ -7,7 +7,7 @@
     align-items: normal;
 	height: 615px;
 	width: 615px;
-	border: groove 4px black;
+	border: groove 5px black;
 
 }
 
@@ -29,17 +29,18 @@ body {
 	animation-timing-function: ease-out;
 }
 h1 {
-	font-family: monospace;
+	font-family: Ubuntu Condensed, monospace;
 	text-align: center;
 	margin: auto;
 	padding: 10px;
-	font-size: 42px;
+	font-size: 50px;
 }
 button {
-	margin: 15px 30px 15px 30px;
+	margin: 25px 18px 25px 18px;
 	transform: scale(1.5);
 	background-image: linear-gradient(#678, #765);
 	border: solid 1px #222;
+	font-family: Ubuntu Condensed, monospace;
 }
 
 button:active {
@@ -54,10 +55,10 @@ button:active {
 
 #mySource {
     position: absolute;
-    bottom: 2px;
-    right: 2px;
-    font-family: monospace;
-    font-size: 18px;
+    bottom: 5px;
+    right: 5px;
+    font-family: Ubuntu Condensed, monospace;
+    font-size: 20px;
 }
 
 @keyframes loading {
