@@ -42,6 +42,10 @@ button {
 	border: solid 1px #222;
 }
 
+button:active {
+    background-image: linear-gradient(#456, #543);
+}
+
 #userButtons {
     margin: auto;
     display: flex;
