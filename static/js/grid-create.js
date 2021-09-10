@@ -36,20 +36,23 @@ function createLinesForGrid() {
 };
 
 function changeGridPixels() {
-	console.log("Valid");
-	let userWant = prompt("Enter desired pixels in grid (16 to 64)", 44);
+    let userWant = sizeSlider.value;
 	let newGridParam = parseInt(userWant);
 	if (newGridParam >= 16 && newGridParam <= 64) {
 		gridPixels = newGridParam;
 		createLinesForGrid();
 	} else {
-		alert("Invalid input");
+		console.log("not in parameters")
 	};
 };
 
 const welcome = document.createElement("h1");
 welcome.innerText = "Web Sketch";
 document.body.appendChild(welcome);
+const instructSize = document.createElement("h4");
+instructSize.innerText = "Grid can be sized between 16 and 64 pixels";
+document.body.appendChild(instructSize);
+
 let rContainer = '';
 
 const buttonsArea = document.createElement("div");
@@ -60,6 +63,17 @@ const resetButton = document.createElement("button");
 resetButton.textContent = "reset";
 buttonsArea.appendChild(resetButton);
 resetButton.addEventListener('click', createLinesForGrid);
+
+const sizeSlider = document.createElement("input");
+sizeSlider.setAttribute('type', 'number');
+sizeSlider.setAttribute('id', 'sizeInput');
+sizeSlider.setAttribute('min', '16');
+sizeSlider.setAttribute('max', '64');
+sizeSlider.setAttribute('step', '1');
+sizeSlider.setAttribute('size', '2');
+sizeSlider.title = "Number of pixels";
+sizeSlider.value = 44;
+buttonsArea.appendChild(sizeSlider);
 
 const resizeButton = document.createElement("button");
 resizeButton.textContent = "resize pixels";
